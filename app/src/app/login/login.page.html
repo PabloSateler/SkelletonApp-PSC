@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title >Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-img class="imagen" src="assets/duoclogo.png"/>
+  <div class="Contenedor_inicio">
+    
+    <ion-title>
+      Bienvenido a MiAsistencia
+    </ion-title>
+    <P>
+      Ingresar con tu usuario o correo Duoc para registrar tu asistencia
+    </P>
+  </div>
+  
+  <form [formGroup]="formularioLogin">
+    <ion-item>
+        <ion-input placeholder="Usuario (correo Duoc)" formControlName="nombre"></ion-input>
+        <ion-icon name="person-outline" ></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Contraseña" formControlName="password" type="password" ></ion-input>
+        <ion-icon name="lock-closed-outline" ></ion-icon>
+    </ion-item>  
+  </form>
+  <ion-button expand="block"  class="Boton" (click)="ingresar" [routerLink]="['/home']">
+
+    Iniciar Sesión
+    <ion-icon slot="end" name="chevron-forward"></ion-icon> 
+  </ion-button>
+  <div class="resetpass">
+    <ion-toolbar>
+    <p> Haz click <a [routerLink]="['/restablecer-pass']"> aquí</a> si olvidaste tu contraseña</p>      
+    </ion-toolbar>
+
+  </div>
+
+</ion-content>

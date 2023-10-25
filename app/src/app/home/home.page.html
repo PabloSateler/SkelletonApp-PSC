@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Main
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="imagen"><ion-img src="assets/duoclogo.png"/></div>  
+  <ion-title class="titulo"> Bienvenido </ion-title>
+  <ion-title class="subtitulo"> Estimado </ion-title>
+  <p class="subtitulo"> Registrar tu asistencia nunca fue más fácil</p>
+  <div class="texto"> 
+
+    <p> Asegurate de que la aplicación cuente con los permisos para acceder a la cámara de tu dispositivo</p>
+
+  </div>
+
+  <ion-button expand="block" class="scan"> Escanear Código QR </ion-button>
+  <ion-button expand="block" class="logout" [routerLink]="['/miscursos']"> Mis Cursos </ion-button>
+  <ion-button expand="block" class="logout" [routerLink]="['/login']"> Cerrar Sesión </ion-button>
+</ion-content>
